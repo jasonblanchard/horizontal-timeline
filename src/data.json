@@ -16,5 +16,23 @@
     "start": "Wed Apr 19 1775 00:00:00 GMT-0400 (EDT)",
     "end": "Wed May 12 1784 00:00:00 GMT-0400 (EDT)",
     "type": "event"
+  },
+  {
+    "name": "John Adams",
+    "start": "Sun Oct 30 1735 00:00:00 GMT-0400 (EDT)",
+    "end": "Tue Jul 04 1826 00:00:00 GMT-0400 (EDT)",
+    "type": "person"
+  },
+  {
+    "name": "Benjamin Franklin",
+    "start": "Sun Jan 17 1706 00:00:00 GMT-0500 (EST)",
+    "end": "Sat Apr 17 1790 00:00:00 GMT-0400 (EDT)",
+    "type": "person"
+  },
+  {
+    "name": "Thomas Jefferson",
+    "start": "Sat Apr 13 1743 00:00:00 GMT-0400 (EDT)",
+    "end": "Tue Jul 04 1826 00:00:00 GMT-0400 (EDT)",
+    "type": "person"
   }
 ]
