@@ -2,6 +2,7 @@
   "extends": "airbnb",
   "rules": {
     "newline-per-chained-call": 0,
-    "func-names": 0
+    "func-names": 0,
+    "max-len": 0
   }
 }

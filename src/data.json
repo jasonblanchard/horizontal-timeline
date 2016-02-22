@@ -1,0 +1,20 @@
+[
+  {
+    "name": "George Washington",
+    "start": "Fri Feb 22 1732 00:00:00 GMT-0500 (EST)",
+    "end" : "Sat Dec 14 1799 00:00:00 GMT-0500 (EST)",
+    "type": "person"
+  },
+  {
+    "name": "Alexander Hamilton",
+    "start": "Sat Jan 11 1755 00:00:00 GMT-0500 (EST)",
+    "end": "Thu Jul 12 1804 00:00:00 GMT-0400 (EDT)",
+    "type": "person"
+  },
+  {
+    "name": "Revolutionary War",
+    "start": "Wed Apr 19 1775 00:00:00 GMT-0400 (EDT)",
+    "end": "Wed May 12 1784 00:00:00 GMT-0400 (EDT)",
+    "type": "event"
+  }
+]
