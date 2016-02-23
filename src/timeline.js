@@ -1,5 +1,5 @@
 import d3 from 'd3';
-import rawData from './data';
+import rawData from '../data/data';
 
 const data = rawData.sort((a, b) => new Date(a.start) - new Date(b.start));
 
