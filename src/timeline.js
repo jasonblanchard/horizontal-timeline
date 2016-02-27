@@ -40,13 +40,28 @@ export default () => {
 
   bar.append('rect')
     .attr('x', d => xScale(new Date(d.start)))
-    // .attr('height', yScale.rangeBand() / data.length)
     .attr('height', yScale.rangeBand())
-    .attr('width', d => xScale(new Date(d.end)) - xScale(new Date(d.start)));
+    .attr('class', d => {
+      return d.start === d.end ? 'moment' : '';
+    })
+    .attr('width', d => {
+      if (d.start === d.end) {
+        return '1px';
+      }
+      return xScale(new Date(d.end)) - xScale(new Date(d.start));
+    });
 
   bar.append('text')
     .attr('x', d => xScale(new Date(d.start)) + 5)
     .attr('y', yScale.rangeBand() / 2)
     .attr('dy', '.35em')
-    .text(d => `${d.name} ${new Date(d.start).getFullYear()}-${new Date(d.end).getFullYear()}`);
+    .attr('class', d => {
+      return d.start === d.end ? 'moment' : '';
+    })
+    .text(d => {
+      if (d.start === d.end) {
+        return `${d.name} ${new Date(d.start).getFullYear()}`;
+      }
+      return `${d.name} ${new Date(d.start).getFullYear()}-${new Date(d.end).getFullYear()}`;
+    });
 };

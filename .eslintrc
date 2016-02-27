@@ -3,6 +3,7 @@
   "rules": {
     "newline-per-chained-call": 0,
     "func-names": 0,
-    "max-len": 0
+    "max-len": 0,
+    "arrow-body-style": 0
   }
 }
