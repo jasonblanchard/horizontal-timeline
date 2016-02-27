@@ -2,6 +2,11 @@ body {
   background: #DCDCDC;
 }
 
+.chart-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .axis text {
   font: 10px sans-serif;
   fill: #3E3946;
@@ -14,9 +19,18 @@ body {
   shape-rendering: crispEdges;
 }
 
+.axis.major line {
+  stroke: #A9A7A7;
+}
+
+.axis.minor line {
+  stroke: #CAC9C9;
+}
+
 text {
   fill: #151515;
   font: 10px sans-serif;
+  font-weight: bold;
 }
 
 .chart rect {

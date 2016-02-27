@@ -32,6 +32,30 @@ export default () => {
     .attr('class', 'x axis')
     .call(xAxis);
 
+  const minorXAxis = d3.svg.axis()
+    .orient('top')
+    .scale(xScale)
+    .tickFormat('')
+    .tickSize(height)
+    .ticks(d3.time.year, 1);
+
+  chart.append('g')
+    .attr('class', 'minor x axis')
+    .attr('transform', `translate(0, ${height})`)
+    .call(minorXAxis);
+
+  const majorXAxis = d3.svg.axis()
+    .orient('top')
+    .scale(xScale)
+    .tickFormat('')
+    .tickSize(height)
+    .ticks(d3.time.year, 5);
+
+  chart.append('g')
+    .attr('class', 'major x axis')
+    .attr('transform', `translate(0, ${height})`)
+    .call(majorXAxis);
+
   const bar = chart.selectAll('g.entry')
     .data(data).enter()
     .append('g')
