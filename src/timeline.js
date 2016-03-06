@@ -6,7 +6,7 @@ const data = rawData.sort((a, b) => new Date(a.start) - new Date(b.start));
 export default () => {
   const margins = { top: 20, right: 10, bottom: 0, left: 0 };
   const width = 2160 - margins.right - margins.left;
-  const height = 350 - margins.top - margins.bottom;
+  const height = 500 - margins.top - margins.bottom;
 
   const xScale = d3.time.scale()
     // .domain([d3.min(data, d => new Date(d.start)), d3.max(data, d => new Date(d.end))])
@@ -19,7 +19,7 @@ export default () => {
 
   const zoom = d3.behavior.zoom()
     .x(xScale)
-    .scaleExtent([1, 1]);
+    .scaleExtent([0.5, 5]);
 
   const xAxis = d3.svg.axis()
     .orient('top')
