@@ -10,7 +10,7 @@ export default () => {
 
   const xScale = d3.time.scale()
     // .domain([d3.min(data, d => new Date(d.start)), d3.max(data, d => new Date(d.end))])
-    .domain([new Date('1700'), new Date('1830')])
+    .domain([new Date('1700'), new Date('1900')])
     .range([0, width - margins.left - margins.right]);
 
   const yScale = d3.scale.ordinal()
@@ -42,6 +42,8 @@ export default () => {
     .ticks(d3.time.year, 5);
 
   function drawChart() {
+    d3.select('.chart g').remove();
+
     const chart = d3.select('.chart')
       .attr('width', width + margins.right + margins.left)
       .attr('height', height + margins.top + margins.bottom)
@@ -63,8 +65,13 @@ export default () => {
       .attr('transform', `translate(0, ${height})`)
       .call(majorXAxis);
 
+
     const bar = chart.selectAll('g.entry')
-      .data(data).enter()
+      .data(data);
+
+    bar.exit().remove();
+
+    bar.enter()
       .append('g')
       .attr('class', 'entry')
       .attr('transform', d => `translate(0, ${yScale(d.name)})`);
